@@ -7,7 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Globe } from "lucide-react";
+import { Languages } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 type Language = {
@@ -17,8 +17,9 @@ type Language = {
 };
 
 const languages: Language[] = [
-  { code: "en", name: "English", flag: "🇬🇧" },
-  { code: "it", name: "Italiano", flag: "🇮🇹" },
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "ru", name: "Русский", flag: "🇷🇺" },
+  { code: "uz", name: "O'zbek", flag: "🇺🇿" },
 ];
 
 export default function LanguageSelector() {
@@ -46,7 +47,7 @@ export default function LanguageSelector() {
           aria-label="Select Language"
         >
           <div className="flex items-center space-x-2">
-            <Globe className="h-4 w-4" />
+            <Languages className="h-4 w-4" />
             <SelectValue placeholder="Select language" />
           </div>
         </SelectTrigger>
